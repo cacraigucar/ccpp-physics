@@ -94,6 +94,7 @@ contains
 !! | errflg     | error_flag                                       | CCPP error flag                         | flag    |    0 | integer   |           | out    | F        |
 !!
   subroutine chemistry_init (co, errmsg, errflg)
+
     implicit none
 
     !--- arguments
