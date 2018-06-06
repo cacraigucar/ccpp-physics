@@ -260,6 +260,8 @@ else (PROJECT STREQUAL "CCPP-FV3")
   ./physics/rayleigh_damp_cap.F90
   ./physics/get_phi_fv3_cap.F90
   ./physics/zhaocarr_precpd_cap.F90
+  ./physics/chemistry.F90
+  ./physics/chemistry_cap.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
