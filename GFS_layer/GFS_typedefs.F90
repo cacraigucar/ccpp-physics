@@ -2222,8 +2222,7 @@ module GFS_typedefs
     use mersenne_twister, only: random_setseed, random_number
     use module_ras,       only: nrcmax
     use parse_tracers,    only: get_tracer_index
-    use wam_f107_kp_mod,  only: f107_kp_size, f107_kp_interval, &
-                                f107_kp_skip_size, f107_kp_data_size
+
     implicit none
 
     !--- interface variables
@@ -2685,12 +2684,6 @@ module GFS_typedefs
     Model%kdt              = 0
     Model%jdat(1:8)        = jdat(1:8)
     Model%sec              = 0
-
-    !--- stored in wam_f107_kp module
-    f107_kp_size      = 56
-    f107_kp_skip_size = 0
-    f107_kp_data_size = 56
-    f107_kp_interval  = 10800
 
     !--- BEGIN CODE FROM GFS_PHYSICS_INITIALIZE
     !--- define physcons module variables
