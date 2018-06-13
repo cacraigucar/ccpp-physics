@@ -116,12 +116,11 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/radiation_gases.f
       ./physics/ozne_def.f
       ./physics/radiation_surface.f
-      ./physics//h2o_def.f
+      ./physics/h2o_def.f
       ./physics/sfcsub.F
       ./physics/mersenne_twister.f
       ./physics/rascnvv2.f
       ./physics/GFDL_parse_tracers.F90
-      ./physics/wam_f107_kp_mod.f90
       ./physics/num_parthds.F
       ./physics/gocart_tracer_config_stub.f
       ./GFS_layer/GFS_suite_setup_scm.F90
@@ -144,47 +143,10 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/radlw_datatb.f
       ./physics/set_soilveg.f
       ./physics/namelist_soilveg.f
-      ./physics/GFS_phys_time_vary.scm.f90
       ./physics/ozinterp.f90
       ./physics/h2ointerp.f90
-      ./physics/gcycle.f90
-      ./physics/GFS_rad_time_vary.scm.f90
-      ./physics/GFS_radupdate.f90
-      ./physics/GFS_suite_interstitial.ccpp.F90
-      ./physics/get_prs_fv3.f90
-      ./physics/sfc_sice.f
-      ./physics/dcyc2.f
       ./physics/GFS_surface_generic.f90
-      ./physics/GFS_PBL_generic.f90
-      ./physics/sfc_drv.f
-      ./physics/sflx.f
-      ./physics/sfc_diff.f
-      ./physics/GFS_surface_loop_control.f
-      ./physics/sfc_nst.f
-      ./physics/date_def.f
-      ./physics/module_nst_water_prop.f90
-      ./physics/module_nst_parameters.f90
-      ./physics/module_nst_model.f90
-      ./physics/sfc_diag.f
-      ./physics/moninedmf.f
-      ./physics/mfpbl.f
-      ./physics/tridi.f
-      ./physics/gwdps.f
-      ./physics/rayleigh_damp.f
-      ./physics/ozphys.f
-      ./physics/GFS_DCNV_generic.f90
-      ./physics/GFS_zhao_carr_pre.f90
-      ./physics/mfdeepcnv.f
-      ./physics/gwdc.f
-      ./physics/GFS_SCNV_generic.f90
-      ./physics/mfshalcnv.f
-      ./physics/cnvc90.f
-      ./physics/GFS_MP_generic_pre.f90
-      ./physics/gscond.f
-      ./physics/precpd.f
-      ./physics/GFS_calpreciptype.f90
-      ./physics/GFS_MP_generic_post.f90
-      ./physics/gmtb_scm_sfc_flux_spec.f90
+      ./physics/chemistry.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
@@ -193,75 +155,8 @@ if (PROJECT STREQUAL "CCPP-FV3")
   include(./CCPP_CAPS.cmake)
 else (PROJECT STREQUAL "CCPP-FV3")
   set(CAPS
-  ./physics/rrtmg_sw_pre_cap.F90
-  ./physics/ozphys_post_cap.F90
-  ./physics/GFS_DCNV_generic_post_cap.F90
-  ./physics/ozphys_pre_cap.F90
-  ./physics/gwdps_pre_cap.F90
-  ./physics/gwdc_cap.F90
-  ./physics/GFS_suite_interstitial_rad_reset_cap.F90
-  ./physics/GFS_MP_generic_post_cap.F90
-  ./physics/rrtmg_sw_cap.F90
-  ./physics/lsm_noah_pre_cap.F90
-  ./physics/sfc_sice_pre_cap.F90
-  ./physics/dcyc2t3_post_cap.F90
-  ./physics/rrtmg_sw_post_cap.F90
-  ./physics/rrtmg_lw_cap.F90
-  ./physics/GFS_PBL_generic_pre_cap.F90
-  ./physics/gwdps_post_cap.F90
-  ./physics/gmtb_scm_sfc_flux_spec_cap.F90
-  ./physics/GFS_suite_interstitial_1_cap.F90
-  ./physics/GFS_rrtmg_post_cap.F90
-  ./physics/GFS_suite_interstitial_2_cap.F90
-  ./physics/GFS_surface_generic_pre_cap.F90
-  ./physics/rrtmg_lw_pre_cap.F90
-  ./physics/GFS_rad_time_vary_cap.F90
-  ./physics/sasas_shal_post_cap.F90
-  ./physics/sfc_diag_cap.F90
-  ./physics/GFS_SCNV_generic_pre_cap.F90
-  ./physics/GFS_PBL_generic_post_cap.F90
-  ./physics/sasas_shal_cap.F90
-  ./physics/sfc_ex_coef_cap.F90
-  ./physics/gwdc_post_cap.F90
-  ./physics/GFS_suite_update_stateout_cap.F90
-  ./physics/sasas_deep_cap.F90
-  ./physics/gwdc_pre_cap.F90
-  ./physics/sfc_sice_cap.F90
-  ./physics/sfc_nst_post_cap.F90
-  ./physics/GFS_surface_generic_post_cap.F90
-  ./physics/cnvc90_cap.F90
-  ./physics/GFS_phys_time_vary_2_cap.F90
-  ./physics/edmf_cap.F90
-  ./physics/GFS_surface_loop_control_part2_cap.F90
-  ./physics/GFS_surface_loop_control_part1_cap.F90
-  ./physics/GFS_surface_loop_control_part0_cap.F90
-  ./physics/rrtmg_lw_post_cap.F90
-  ./physics/GFS_zhao_carr_pre_cap.F90
-  ./physics/lsm_noah_post_cap.F90
-  ./physics/GFS_rrtmg_pre_cap.F90
-  ./physics/GFS_suite_interstitial_phys_reset_cap.F90
-  ./physics/sfc_nst_pre_cap.F90
-  ./physics/GFS_SCNV_generic_post_cap.F90
-  ./physics/GFS_suite_setup_scm_cap.F90
-  ./physics/GFS_phys_time_vary_1_cap.F90
-  ./physics/dcyc2t3_cap.F90
-  ./physics/GFS_DCNV_generic_pre_cap.F90
-  ./physics/zhaocarr_gscond_cap.F90
-  ./physics/GFS_suite_interstitial_3_cap.F90
-  ./physics/lsm_noah_cap.F90
-  ./physics/GFS_MP_generic_pre_cap.F90
-  ./physics/sfc_sice_post_cap.F90
-  ./physics/sfc_nst_cap.F90
-  ./physics/gwdps_cap.F90
-  ./physics/get_prs_fv3_cap.F90
-  ./physics/dcyc2t3_pre_cap.F90
-  ./physics/ozphys_cap.F90
-  ./physics/GFS_calpreciptype_cap.F90
-  ./physics/rayleigh_damp_cap.F90
-  ./physics/get_phi_fv3_cap.F90
-  ./physics/zhaocarr_precpd_cap.F90
-  ./physics/chemistry.F90
-  ./physics/chemistry_cap.F90
+      ./physics/GFS_suite_setup_scm_cap.F90
+      ./physics/chemistry_cap.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
