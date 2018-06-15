@@ -2,14 +2,14 @@ module GFS_typedefs
 
        use machine,                   only: kind_phys, kind_evod
        ! Radiation-specific types and parameters
-       use module_radlw_parameters,   only: sfcflw_type, topflw_type, NBDLW
-       use module_radsw_parameters,   only: cmpfsw_type, sfcfsw_type, topfsw_type, NBDSW
-       use module_radiation_aerosols, only: NF_AELW, NF_AESW, NSPC1
-       use module_radiation_clouds,   only: NF_CLDS
-       use module_radiation_gases,    only: NF_VGAS
-       use module_radiation_surface,  only: NF_ALBD
-       use ozne_def,                  only: levozp, oz_coeff, oz_pres
-       use h2o_def,                   only: levh2o, h2o_coeff
+        use module_radlw_parameters,   only: sfcflw_type, topflw_type, NBDLW
+        use module_radsw_parameters,   only: cmpfsw_type, sfcfsw_type, topfsw_type, NBDSW
+        use module_radiation_aerosols, only: NF_AELW, NF_AESW, NSPC1
+        use module_radiation_clouds,   only: NF_CLDS
+        use module_radiation_gases,    only: NF_VGAS
+        use module_radiation_surface,  only: NF_ALBD
+        use ozne_def,                  only: levozp, oz_coeff, oz_pres
+        use h2o_def,                   only: levh2o, h2o_coeff
 
        implicit none
 

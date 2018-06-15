@@ -76,13 +76,15 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 module chemistry
-  use machine, only : rk => kind_phys
 
   implicit none
+
   private
   public :: chemistry_init 
   public :: chemistry_finalize
   public :: chemistry_run
+
+  integer, parameter :: rk = 8
   
 contains
 

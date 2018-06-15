@@ -117,35 +117,10 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/ozne_def.f
       ./physics/radiation_surface.f
       ./physics/h2o_def.f
-      ./physics/sfcsub.F
       ./physics/mersenne_twister.f
       ./physics/rascnvv2.f
       ./physics/GFDL_parse_tracers.F90
-      ./physics/num_parthds.F
       ./physics/gocart_tracer_config_stub.f
-      ./GFS_layer/GFS_suite_setup_scm.F90
-      ./physics/cldwat2m_micro.F
-      ./physics/wv_saturation.F
-      ./physics/aer_cloud.F
-      ./physics/rad_initialize.f
-      ./GFS_layer/GFS_radiation_driver.F90
-      ./physics/radcons.f90
-      ./physics/radiation_astronomy.f
-      ./physics/radsw_main.f
-      ./physics/radsw_datatb.f
-      ./physics/GFS_rrtmg_pre.F90
-      ./physics/GFS_rrtmg_post.F90
-      ./physics/rrtmg_sw_pre.F90
-      ./physics/rrtmg_sw_post.F90
-      ./physics/rrtmg_lw_pre.F90
-      ./physics/rrtmg_lw_post.F90
-      ./physics/radlw_main.f
-      ./physics/radlw_datatb.f
-      ./physics/set_soilveg.f
-      ./physics/namelist_soilveg.f
-      ./physics/ozinterp.f90
-      ./physics/h2ointerp.f90
-      ./physics/GFS_surface_generic.f90
       ./physics/chemistry.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
@@ -155,7 +130,6 @@ if (PROJECT STREQUAL "CCPP-FV3")
   include(./CCPP_CAPS.cmake)
 else (PROJECT STREQUAL "CCPP-FV3")
   set(CAPS
-      ./physics/GFS_suite_setup_scm_cap.F90
       ./physics/chemistry_cap.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
