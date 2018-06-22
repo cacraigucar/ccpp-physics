@@ -121,7 +121,7 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/rascnvv2.f
       ./physics/GFDL_parse_tracers.F90
       ./physics/gocart_tracer_config_stub.f
-      ./physics/chemistry.F90
+      ../MICM_chemistry/src/chemistry.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
