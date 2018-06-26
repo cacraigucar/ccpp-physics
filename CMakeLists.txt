@@ -121,7 +121,7 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/rascnvv2.f
       ./physics/GFDL_parse_tracers.F90
       ./physics/gocart_tracer_config_stub.f
-      ../MICM_chemistry/src/chemistry.F90
+      ../MICM_chemistry/src/chem_solve.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
@@ -130,7 +130,7 @@ if (PROJECT STREQUAL "CCPP-FV3")
   include(./CCPP_CAPS.cmake)
 else (PROJECT STREQUAL "CCPP-FV3")
   set(CAPS
-      ./physics/chemistry_cap.F90
+      ./physics/chem_solve_cap.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
