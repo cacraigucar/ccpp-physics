@@ -105,6 +105,7 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/physcons.f90
       ./physics/funcphys.f90
       ./GFS_layer/GFS_typedefs.F90
+      ../ibox/src/micm_type_defs.f90
       ./physics/radlw_param.f
       ./physics/physparam.f
       ./physics/radsw_param.f
@@ -122,6 +123,7 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/GFDL_parse_tracers.F90
       ./physics/gocart_tracer_config_stub.f
       ../MICM_chemistry/src/chem_solve.F90
+      ../ibox/src/ibox_main.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
