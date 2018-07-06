@@ -122,6 +122,7 @@ else (PROJECT STREQUAL "CCPP-FV3")
       ./physics/GFDL_parse_tracers.F90
       ./physics/gocart_tracer_config_stub.f
       ../MICM_chemistry/src/chem_solve.F90
+      ../MICM_chemistry/src/kinetic.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
@@ -131,6 +132,7 @@ if (PROJECT STREQUAL "CCPP-FV3")
 else (PROJECT STREQUAL "CCPP-FV3")
   set(CAPS
       ./physics/chem_solve_cap.F90
+      ./physics/kinetic_cap.F90
   )
 endif (PROJECT STREQUAL "CCPP-FV3")
 
